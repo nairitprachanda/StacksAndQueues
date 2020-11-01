@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace StacksandQueues
 {
-        public class Queue
-        {
+    public class Queue
+    {
         Node head = null;
         public void Enqueue(int data)
         {
@@ -19,6 +18,13 @@ namespace StacksandQueues
                     temp = temp.next;
                 temp.next = node;
             }
+        }
+        public void Dequeue()
+        {
+            if (head == null)
+                Console.WriteLine("Empty Queue !!");
+            else
+                head = head.next;
         }
         public void Display()
         {
